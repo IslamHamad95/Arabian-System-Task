@@ -29,7 +29,7 @@ const AddPost=()=>{
         fetch('https://jsonplaceholder.typicode.com/posts', requestOptions) 
             .then(response => response.json())
             .then(res=>console.log(res))
-      }}, [submitPost, newPost]);
+      }}, [submitPost]);
 
     return(
         <div>
