@@ -10,7 +10,7 @@ const Pagination =(props)=>{
     return(
         <nav>
         {
-            PageNumbers.map((number)=>(<a onClick={()=>(props.paginate(number))} key={number} href="#">{number}</a>))
+            PageNumbers.map((number)=>(<button tabIndex="0" role="link" type="button" onClick={()=>(props.paginate(number))} key={number} href="#">{number}</button>))
         }
         </nav>
     )

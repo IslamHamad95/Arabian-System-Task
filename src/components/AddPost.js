@@ -1,14 +1,15 @@
 import React,{useState,useEffect} from "react"
 
 
-const AddPost=()=>{
-    const [newPost,setNewPost]=useState({title:"", body:""})
+const AddPost=(prps)=>{
+    const [newPost,setNewPost]=useState({title:"", body:"",userId:0})
     const [submitPost, setSubmitPost]=useState(false)
     
     const getPost=(e)=>{
         setNewPost({
           ...newPost,
-          [e.target.name]:e.target.value
+          [e.target.name]:e.target.value,
+          userId:11
         })
       
       }
@@ -28,9 +29,7 @@ const AddPost=()=>{
         fetch('https://jsonplaceholder.typicode.com/posts', requestOptions) 
             .then(response => response.json())
             .then(res=>console.log(res))
-            
-    
-      }}, [submitPost]);
+      }}, [submitPost, newPost]);
 
     return(
         <div>
@@ -44,7 +43,7 @@ const AddPost=()=>{
         <label>Body:</label>  <br/>
         <input id="body" name="body" value={newPost.body} onChange={getPost}></input>
         <br/>
-        <button type="submit" onClick={handleSubmit} > Add Post</button>
+        <button id="submit-btn" type="submit" onClick={handleSubmit} > Add Post</button>
         </form>
 
         </div>

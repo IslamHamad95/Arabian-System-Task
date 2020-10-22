@@ -36,7 +36,7 @@ const Posts=()=>{
             ))
         }
         </ul>
-        <Pagination  postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate}/>
+        <Pagination  postsPerPage={postsPerPage}  totalPosts={posts.length} paginate={paginate}/>
 
         <AddPost/>
         </div>
