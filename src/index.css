@@ -1,3 +1,8 @@
+*{
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,63 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 2%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header{
+  
+  font-size: 3vh;
+  width: 10%;
+  margin-left: 45%;
+  
+}
+
+.header :first-child{
+  padding: 10%;
+}
+
+
+.List{
+  font-size: large;
+ 
+}
+
+nav{
+  font-size: 3vh;
+  width: 50%;
+  margin-left: 25%;
+  
+}
+nav >*{
+  padding-left: 2%;
+}
+
+#add-post{
+  font-size: 3vh;
+  width: fit-content;
+  
+}
+
+form >*{
+  margin-left: 0.5%;
+}
+
+button{
+  background-color: white;
+  padding: 1%;
+  font-weight: bold;
+}
+
+input{
+  padding: 0.5%;
+  background-color: white;
+}
+
+label{
+  font-size: 3vh;
 }
