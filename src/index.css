@@ -1,7 +1,8 @@
 *{
-  background-color: aquamarine;
+  background-color: teal;
   margin: 0;
   padding: 0;
+  color: white;
 }
 body {
   margin: 0;
@@ -32,9 +33,16 @@ code {
 
 
 .List{
-  font-size: large;
- 
+  font-size: 2vh;
+  font-weight: bold;
+ margin-top: 5%;
+ margin-left:2%  ;
 }
+
+input[type="checkbox"]{
+  font-size: 100%;
+  width: 20px; 
+  height: 20px;} 
 
 nav{
   font-size: 3vh;
@@ -44,6 +52,7 @@ nav{
 }
 nav >*{
   padding-left: 2%;
+
 }
 
 #add-post{
@@ -52,21 +61,34 @@ nav >*{
   
 }
 
+form{
+  margin-top: 1%
+}
+
 form >*{
   margin-left: 0.5%;
+  margin-bottom:1% ;
 }
 
 button{
-  background-color: white;
+  background-color: teal;
   padding: 1%;
+  margin-left: 5%;
   font-weight: bold;
+  font-size:2vh;
+  border:solid 5px white
 }
 
-input{
+#title, #body{
   padding: 0.5%;
   background-color: white;
+  width: 10%;
 }
 
 label{
-  font-size: 3vh;
+  font-size: 2vh;
+}
+
+.is-active{
+  font-weight: bold;
 }

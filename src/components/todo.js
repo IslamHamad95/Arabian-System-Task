@@ -4,7 +4,6 @@ import Pagination from "./pagination"
 
 const ToDo=()=>{
     const [ToDoList,setToDoList]=useState([]);
-
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(10);
 
@@ -18,6 +17,9 @@ const ToDo=()=>{
     .catch(error=>console.error)
   
   },[]);
+
+
+ 
 
     const indexOfLastPost= currentPage* itemsPerPage;
     const indexOfFirstPost= indexOfLastPost - itemsPerPage;
@@ -35,7 +37,7 @@ const ToDo=()=>{
         {
             currentitems.map((item)=>(
                 <div key={item.id} className="todo-item">
-                <input type="checkbox"  name={item.title} value={item.title} />
+                <input type="checkbox" defaultChecked={item.completed} name={item.title} value={item.title} />
                 <label htmlFor={item.id}> {item.title}</label>
                 </div>
             ))

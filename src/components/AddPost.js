@@ -38,14 +38,15 @@ const AddPost=()=>{
         
         <form>
 
-        <label>Title</label>
+        <label>Title:</label>  <br/>
         <input id="title" name="title" value={newPost.title} onChange={getPost}></input>
-        
-        <label>Body</label>
+        <br/>
+        <label>Body:</label>  <br/>
         <input id="body" name="body" value={newPost.body} onChange={getPost}></input>
-        
+        <br/>
         <button type="submit" onClick={handleSubmit} > Add Post</button>
         </form>
+
         </div>
     )
 
