@@ -96,3 +96,7 @@ label{
 .is-active{
   font-weight: bold;
 }
+
+input{
+  color: black;
+}

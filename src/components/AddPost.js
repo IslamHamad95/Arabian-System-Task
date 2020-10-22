@@ -1,15 +1,15 @@
 import React,{useState,useEffect} from "react"
 
 
-const AddPost=(prps)=>{
-    const [newPost,setNewPost]=useState({title:"", body:"",userId:0})
+const AddPost=()=>{
+    const [newPost,setNewPost]=useState({title:"", body:""})
     const [submitPost, setSubmitPost]=useState(false)
     
     const getPost=(e)=>{
         setNewPost({
           ...newPost,
           [e.target.name]:e.target.value,
-          userId:11
+       
         })
       
       }
