@@ -29,8 +29,7 @@ const AddPost=()=>{
 
       const submitNewPost=(post)=>{
 
-        console.log("Submit new post has been called.")
-
+      
         if(post.title && post.body ){
           const requestOptions = {
               method: 'POST',
