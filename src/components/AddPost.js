@@ -17,10 +17,18 @@ const AddPost=()=>{
       const handleSubmit=(e)=>{
           e.preventDefault();
           setSubmitPost({submitPost: !submitPost})
+          console.log(newPost)
+          setNewPost({
+            ...newPost,
+            title:"",
+            body:""
+         
+          })
+          
       }
-
+      
       useEffect(() => {
-        if(newPost.title && newPost.body){
+        if(newPost.title && newPost.body && submitPost){
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -28,8 +36,10 @@ const AddPost=()=>{
         };
         fetch('https://jsonplaceholder.typicode.com/posts', requestOptions) 
             .then(response => response.json())
-            .then(res=>console.log(res))
-      }}, [submitPost]);
+          
+      }});
+
+     
 
     return(
         <div>
