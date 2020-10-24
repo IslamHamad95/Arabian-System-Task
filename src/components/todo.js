@@ -36,9 +36,9 @@ const ToDo=()=>{
         <ul className="List">
         {
             currentitems.map((item)=>(
-                <div key={item.id} className="todo-item">
-                <input type="checkbox" defaultChecked={item.completed} name={item.title} value={item.title} />
-                <label htmlFor={item.id}> {item.title}</label>
+                <div id="todo" key={item.id} className="todo-item">
+                <input  type="checkbox" defaultChecked={item.completed} name={item.title} value={item.title} />
+                <label id="todo-title" htmlFor={item.id}> {item.title}</label>
                 </div>
             ))
         }

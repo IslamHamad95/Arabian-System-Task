@@ -27,19 +27,23 @@ const Posts=()=>{
       }
 
     return(
-      
-        <div>
-        <ul className="List">
+      <div>
+
+      <AddPost/>
+        <div className="posts-list">
+        <div className="List">
         {
             currentPosts.map((item)=>(
-                <li key={item.id}>{item.title}</li>
+                <div id="post" key={item.id}>{item.title}</div>
             ))
         }
-        </ul>
+        </div>
+        </div>
         <Pagination  postsPerPage={postsPerPage}  totalPosts={posts.length} paginate={paginate}/>
 
-        <AddPost/>
+
         </div>
+        
     )
 
 }
